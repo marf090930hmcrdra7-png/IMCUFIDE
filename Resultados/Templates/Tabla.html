@@ -1,0 +1,19 @@
+{% extends 'extras/nav.html' %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+
+{% block pag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="{% static 'csss/estilos.css' %}"
+</head>
+<body>
+     {% render_table object_list %}
+</body>
+</html>
+
+{% endblock %}
